@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sahil Razza — AI/ML Student & Developer</title>
+  <meta name="description" content="Sahil Razza is an AI/ML student and developer building practical digital solutions with code, creativity, and curiosity. Specializing in Python, FastAPI, and web engineering.">
+  <meta name="author" content="Sahil Razza">
+  <meta name="theme-color" content="#090608">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sahil Razza — AI/ML Student & Developer">
+  <meta property="og:description" content="Building practical digital solutions with code, creativity, and curiosity.">
+  <meta property="og:url" content="https://sahil-razza.github.io">
+  <meta property="og:image" content="assets/photo1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sahil Razza — AI/ML Student & Developer">
+  <meta name="twitter:description" content="Building practical digital solutions with code, creativity, and curiosity.">
+  <meta name="twitter:image" content="assets/photo1.jpg">
+
+  <!-- SVG Favicon with Branded Identity -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23090608'/%3E%3Cpath d='M9 10h14v3H12v6h11v3H9V10z' fill='%23e0446f'/%3E%3C/svg%3E">
+
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Grain Overlay (2.5%) -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Terminal Boot Loader (Split-Panel Reveal) -->
+  <aside id="loader" aria-label="System Initializing">
+    <div class="loader-curtain loader-top" id="loader-top"></div>
+    <div class="loader-curtain loader-bottom" id="loader-bottom"></div>
+    <div class="loader-box" id="loader-box">
+      <div class="window-header">
+        <div class="window-dots" aria-hidden="true">
+          <span class="dot-red"></span>
+          <span class="dot-yellow"></span>
+          <span class="dot-green"></span>
+        </div>
+        <span class="window-title">sahil-razza / boot.sh</span>
+        <span class="window-title" style="opacity: 0.5;">v2.5.0</span>
+      </div>
+      <div class="loader-log" id="loader-log" role="status" aria-live="polite"></div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loader-bar"></div>
+      </div>
+      <div class="loader-meta">
+        <span id="loader-status">initializing core services...</span>
+        <strong id="loader-percent">0%</strong>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Global Scroll Progress Indicator -->
+  <div class="scroll-indicator-bar" id="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Primary Header & Navigation -->
+  <header class="main-header">
+    <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+      <div class="container nav-inner">
+        <a href="#home" class="nav-brand" aria-label="Sahil Razza Home">
+          <span>sahil</span><span class="dot">.</span><span>dev</span>
+        </a>
+
+        <div class="nav-links-wrapper">
+          <div class="nav-pill" id="nav-active-pill" aria-hidden="true"></div>
+          <ul class="nav-links" id="nav-links-list">
+            <li><a href="#home" class="nav-item-link is-active">Home</a></li>
+            <li><a href="#about" class="nav-item-link">About</a></li>
+            <li><a href="#projects" class="nav-item-link">Projects</a></li>
+            <li><a href="#skills" class="nav-item-link">Skills</a></li>
+            <li><a href="#journey" class="nav-item-link">Journey</a></li>
+            <li><a href="#contact" class="nav-item-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme" title="Toggle theme">
+            <!-- Sun Icon (for light mode) -->
+            <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+            <!-- Moon Icon (for dark mode) -->
+            <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section id="home" aria-labelledby="hero-title">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow-spot" id="hero-spot" aria-hidden="true"></div>
+      <canvas id="three-canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero-grid">
+        <div class="hero-copy-col">
+          <div class="status-badge" data-animate="hero-badge">
+            <span class="status-pulse" aria-hidden="true"></span>
+            <span>B.Tech AI &amp; ML · Class of 2029</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-title">
+            <span class="title-line"><span class="char-wrap">Sahil</span></span>
+            <span class="title-line"><span class="char-wrap accent-char">Razza.</span></span>
+          </h1>
+
+          <p class="hero-role" data-animate="hero-role">AI/ML Student &amp; Developer</p>
+
+          <p class="hero-typewriter" data-animate="hero-type">
+            <span class="ty-keyword">const</span> focus = <span class="ty-val" id="typewriter-text"></span><span class="ty-cursor" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero-tagline" data-animate="hero-tag">
+            Building practical digital solutions with code, creativity, and curiosity.
+          </p>
+
+          <div class="hero-actions" data-animate="hero-actions">
+            <a class="btn btn-primary magnetic" href="#projects">
+              <span>View projects</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a class="btn btn-secondary magnetic" href="#contact">
+              <span>Contact me</span>
+            </a>
+          </div>
+
+          <div class="hero-socials" data-animate="hero-socials">
+            <a href="https://github.com/sahil-razza" target="_blank" rel="noopener noreferrer" class="social-link">github ↗</a>
+            <a href="https://www.linkedin.com/in/sahil-razza-9a473a382" target="_blank" rel="noopener noreferrer" class="social-link">linkedin ↗</a>
+            <a href="mailto:sahilrazza670@gmail.com" class="social-link">email ↗</a>
+          </div>
+        </div>
+
+        <div class="hero-stage" data-animate="hero-stage">
+          <div class="hero-rig" id="hero-rig">
+            <div class="hero-photo-card" id="hero-photo-card">
+              <div class="window-header">
+                <div class="window-dots" aria-hidden="true">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <span class="window-title">sahil.py</span>
+                <span class="window-title" id="neural-state-badge" style="color:var(--crimson-bright);font-size:10.5px;">BOOTING</span>
+              </div>
+
+              <!-- SIGNATURE MOMENT: Neural Genesis Terminal Stream Overlay -->
+              <div class="neural-overlay" id="neural-overlay" aria-hidden="true">
+                <div class="matrix-code" id="matrix-code-stream"></div>
+                <div class="neural-bar-wrapper">
+                  <div class="neural-bar">
+                    <div class="neural-bar-inner" id="neural-bar-inner"></div>
+                  </div>
+                  <div class="neural-status-txt">
+                    <span id="neural-stream-status">SYNAPSE_INIT</span>
+                    <span id="neural-stream-percent">0%</span>
+                  </div>
+                </div>
+              </div>
+
+              <img id="hero-main-img" src="assets/photo2.jpg" alt="Sahil Razza portrait" width="380" height="475" fetchpriority="high">
+            </div>
+
+            <span class="hero-badge" aria-hidden="true">AI / ML</span>
+
+            <div class="hero-snippet" aria-hidden="true">
+              <span class="k">class</span> <span class="f">Developer</span>:<br>
+              &nbsp;&nbsp;name = <span class="sy">"Sahil Razza"</span><br>
+              &nbsp;&nbsp;focus = [<span class="sy">"AI/ML"</span>, <span class="sy">"Full-stack"</span>]<br>
+              &nbsp;&nbsp;building = <span class="sy">"YURIEL"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-pill"><div class="scroll-dot"></div></div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section section-alt" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <header class="section-header" data-animate="fade-up">
+          <span class="section-tag">// about</span>
+          <h2 id="about-heading">About me</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-media-col" data-animate="fade-up">
+            <div class="stack-container" id="photo-stack" role="region" aria-label="Interactive Photo Stack Gallery" tabindex="0">
+              <!-- Dynamically populated cards with photos -->
+            </div>
+            <p class="stack-hint">click the photos to switch</p>
+          </div>
+
+          <div class="about-content-col" data-animate="fade-up">
+            <p class="about-lead">
+              I’m Sahil Razza, a B.Tech student specializing in Artificial Intelligence and Machine Learning.
+            </p>
+            <p class="about-body">
+              I’m passionate about programming, web development, and exploring how technology can solve real-world problems. Right now I’m improving my programming fundamentals and building practical projects while working towards becoming an AI/ML engineer.
+            </p>
+
+            <!-- Learning Status Callout -->
+            <div class="learning-callout">
+              <span style="color:var(--syn-string)">⚡</span>
+              <span>Currently learning: <strong>Python, Java, DSA</strong></span>
+            </div>
+
+            <div class="code-terminal" aria-label="Code Profile Snippet">
+              <div class="window-header">
+                <div class="window-dots" aria-hidden="true">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <span class="window-title">profile.js</span>
+                <span></span>
+              </div>
+              <pre id="profile-code"></pre>
+            </div>
+
+            <div class="about-stats" data-animate="fade-up">
+              <div class="stat-card">
+                <b class="stat-num" data-target="4">0</b>
+                <span class="stat-label">projects</span>
+              </div>
+              <div class="stat-card">
+                <b class="stat-num" data-target="10">0</b>
+                <span class="stat-label">skills &amp; tools</span>
+              </div>
+              <div class="stat-card">
+                <b class="stat-num" data-target="2029">0</b>
+                <span class="stat-label">graduation</span>
+              </div>
+            </div>
+
+            <div class="about-education" data-animate="fade-up">
+              <strong>B.Tech, Artificial Intelligence and Machine Learning</strong>
+              <span>Ambalika Institute of Management and Technology, expected 2029</span>
+            </div>
+
+            <div class="resume-action" data-animate="fade-up">
+              <a href="assets/Sahil_Razza_Resume.pdf" class="btn btn-secondary magnetic" download="Sahil_Razza_Resume.pdf" title="Download Sahil Razza Resume" target="_blank" rel="noopener">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download Resume (PDF)</span>
+              </a>
+              <span style="font-size: 13px; color: var(--text-3); font-family: var(--font-mono);">Updated Nov 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="container projects-container" id="projects-container">
+        <!-- Project area hover cursor-follow label -->
+        <div class="project-cursor-pill" id="project-cursor-pill" aria-hidden="true">View on GitHub ↗</div>
+
+        <header class="section-header" data-animate="fade-up">
+          <span class="section-tag">// projects</span>
+          <h2 id="projects-heading">Things I’ve built</h2>
+        </header>
+
+        <div class="projects-grid" id="projects-grid" data-animate="fade-up">
+          <!-- Populated dynamically via JS with 3D tilt, glare, and keyboard accessibility -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <header class="section-header" data-animate="fade-up">
+          <span class="section-tag">// skills</span>
+          <h2 id="skills-heading">Tools I work with</h2>
+        </header>
+
+        <div class="skills-grid" id="skills-grid" data-animate="fade-up">
+          <!-- Populated dynamically via JS with 3D card tilt -->
+        </div>
+
+        <p class="skills-legend" data-animate="fade-up">
+          dashed border = <strong>currently learning</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- JOURNEY SECTION -->
+    <section class="section" id="journey" aria-labelledby="journey-heading">
+      <div class="container">
+        <header class="section-header" data-animate="fade-up">
+          <span class="section-tag">// journey</span>
+          <h2 id="journey-heading">How it’s going</h2>
+        </header>
+
+        <div class="timeline-wrap" id="timeline-wrap">
+          <div class="timeline-line-track" aria-hidden="true">
+            <span class="timeline-line-progress" id="timeline-progress"></span>
+          </div>
+
+          <ol class="timeline-list" id="timeline-list">
+            <li class="timeline-item" data-animate="fade-up">
+              <span class="timeline-node" aria-hidden="true"></span>
+              <small class="timeline-period">start</small>
+              <h3 class="timeline-title">B.Tech in AI &amp; ML</h3>
+              <p class="timeline-desc">Began my degree at Ambalika Institute of Management and Technology.</p>
+            </li>
+            <li class="timeline-item" data-animate="fade-up">
+              <span class="timeline-node" aria-hidden="true"></span>
+              <small class="timeline-period">foundations</small>
+              <h3 class="timeline-title">C, HTML, CSS, JavaScript</h3>
+              <p class="timeline-desc">Built core programming and web fundamentals and started DSA practice.</p>
+            </li>
+            <li class="timeline-item" data-animate="fade-up">
+              <span class="timeline-node" aria-hidden="true"></span>
+              <small class="timeline-period">building</small>
+              <h3 class="timeline-title">YURIEL and my portfolio</h3>
+              <p class="timeline-desc">Turned fundamentals into real projects with FastAPI and SQLAlchemy.</p>
+            </li>
+            <li class="timeline-item" data-animate="fade-up">
+              <span class="timeline-node" aria-hidden="true"></span>
+              <small class="timeline-period">now</small>
+              <h3 class="timeline-title">Python and Java</h3>
+              <p class="timeline-desc">Improving fundamentals and building practical projects toward an AI/ML career.</p>
+            </li>
+            <li class="timeline-item" data-animate="fade-up">
+              <span class="timeline-node" aria-hidden="true"></span>
+              <small class="timeline-period">2029</small>
+              <h3 class="timeline-title">Graduation</h3>
+              <p class="timeline-desc">Expected graduation, aiming to work as an AI/ML engineer.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-grid">
+        <div class="contact-copy-col" data-animate="fade-up">
+          <span class="section-tag">// contact</span>
+          <h2 class="contact-headline" id="contact-heading">
+            Let’s build<br>something <em>useful.</em>
+          </h2>
+          <p class="contact-desc">
+            Got an idea, a project or an opportunity? Send me a message and I’ll get back to you.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary magnetic" href="mailto:sahilrazza670@gmail.com">
+              <span>Email me</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+            <button class="btn btn-secondary magnetic" id="copy-email-btn" type="button">
+              <span id="copy-email-txt">Copy email</span>
+            </button>
+          </div>
+
+          <div class="code-terminal contact-terminal">
+            <div class="window-header">
+              <div class="window-dots" aria-hidden="true">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <span class="window-title">contact.sh</span>
+              <span></span>
+            </div>
+            <div class="cli-input">
+              <span style="color:var(--syn-keyword)">$</span> contact --name <span style="color:var(--syn-string)">"Sahil Razza"</span>
+            </div>
+            <div class="contact-links-list">
+              <a href="mailto:sahilrazza670@gmail.com" class="contact-row-link">
+                <span class="row-label">email</span>
+                <span>sahilrazza670@gmail.com</span>
+              </a>
+              <a href="https://github.com/sahil-razza" target="_blank" rel="noopener noreferrer" class="contact-row-link">
+                <span class="row-label">github</span>
+                <span>github.com/sahil-razza ↗</span>
+              </a>
+              <a href="https://www.linkedin.com/in/sahil-razza-9a473a382" target="_blank" rel="noopener noreferrer" class="contact-row-link">
+                <span class="row-label">linkedin</span>
+                <span>in/sahil-razza ↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-portrait-rig" data-animate="fade-up">
+          <div class="contact-portrait-card" id="contact-portrait-card">
+            <div class="window-header">
+              <div class="window-dots" aria-hidden="true">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <span class="window-title">sahil.md</span>
+              <span></span>
+            </div>
+            <img id="contact-main-img" src="assets/photo1.jpg" alt="Sahil Razza portrait" width="340" height="453" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Sahil Razza · built with code and curiosity</p>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a id="top-btn" href="#home" aria-label="Back to top of page" title="Back to top">↑</a>
+
+  <!-- Toast Notification -->
+  <div id="toast" role="alert" aria-live="assertive">email copied to clipboard</div>
+
+  <!-- CDN Dependencies: Three.js, GSAP, ScrollTrigger, Lenis -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Application Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
